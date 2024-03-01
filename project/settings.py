@@ -15,7 +15,7 @@ SECRET_KEY = '11B1Fcae9B027B78B692A013Ff768D88757B7A9Aa5Ba9B6C'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djangovideo-3da1719df856.herokuapp.com']
 
 
 # Application definition
