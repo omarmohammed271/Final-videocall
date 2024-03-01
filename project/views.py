@@ -28,7 +28,7 @@ def logout_view(request):
 @login_required(login_url='login')
 def new_meeting(request):
     
-    return render(request,'videocall/videocall.html',{'username':request.user.username,})
+    return render(request,'videocall/streaming.html',{'username':request.user.username,})
 @login_required(login_url='login')
 def join_meeting(request):
     if request.method == "POST":
