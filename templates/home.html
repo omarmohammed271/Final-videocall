@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+
+<div class="card">
+    <h2 class="Links">Home Page</h2>
+    <div class="Links">
+        <a href="{% url "new_meeting" %}" class="submit download">New Meeting</a>
+    </div>
+    <div class="Links">
+        <a href="{% url "join_meeting" %}" class="submit download">Join Meeting</a>
+    </div>
+    <div class="Links">
+        <a href="{% url "logout" %}" class="submit download">Logout</a>
+    </div>
+        
+        
+
+
+    <!-- start logo img -->
+    <div class="image">
+        <img src="{% static "./image/IMG-20230201-WA0029.jpg" %}" alt="">
+    </div><!--image end-->
+
+</div><!--card end-->
+{% endblock body %}

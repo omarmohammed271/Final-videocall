@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+ <!-- start card -->
+ <div class="card">
+    <h2 class="Links">Join Meeting</h2>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <input class="text" type="text" placeholder="Enter Meeting ID" name="roomID">
+    
+        <button type="submit" class="submit download">Join to Meeting</button>
+    </form> <!--form end-->
+
+    <!-- start logo img -->
+    <div class="image">
+        <img src="{% static "./image/IMG-20230201-WA0029.jpg" %}" alt="">
+    </div><!--image end-->
+
+</div><!--card end-->
+{% endblock body %}
