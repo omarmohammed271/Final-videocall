@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'admin_honeypot','accounts','django_bootstrap5',
+    'admin_honeypot',
 ]
 
 MIDDLEWARE = [
