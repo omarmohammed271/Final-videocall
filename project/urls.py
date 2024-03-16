@@ -8,7 +8,8 @@ from . import views
 urlpatterns = [
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('secureomar/', admin.site.urls),
-    path('',views.home,name='home'),
+    path('',views.register,name='register'),
+    path('home/',views.home,name='home'),
     path('login/',views.login_view,name='login'),
     path('logout/',views.logout_view,name='logout'),
     path('metting/',views.new_meeting,name='new_meeting'),

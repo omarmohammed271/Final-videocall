@@ -4,15 +4,19 @@
 
 <div class="card">
     <h2 class="Links">Home Page</h2>
-    <div class="Links">
-        <a href="{% url "new_meeting" %}" class="submit download">New Meeting</a>
-    </div>
+    {% if user.is_superuser %}
+        <div class="Links">
+            <a href="{% url "new_meeting" %}" class="submit download">New Meeting</a>
+        </div>
+    {% endif %}
     <div class="Links">
         <a href="{% url "join_meeting" %}" class="submit download">Join Meeting</a>
     </div>
+    
     <div class="Links">
         <a href="{% url "logout" %}" class="submit download">Logout</a>
     </div>
+    
         
         
 

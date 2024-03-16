@@ -15,7 +15,8 @@ SECRET_KEY = '11B1Fcae9B027B78B692A013Ff768D88757B7A9Aa5Ba9B6C'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['djangovideo-3da1719df856.herokuapp.com']
+# ALLOWED_HOSTS = ['djangovideo-3da1719df856.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -28,7 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'admin_honeypot',
+    'admin_honeypot','accounts','django_bootstrap5',
 ]
 
 MIDDLEWARE = [

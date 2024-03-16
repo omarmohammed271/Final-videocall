@@ -2,13 +2,32 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate,login,logout
+from accounts.forms import RegisterForm
+
 
 @login_required(login_url='login')
 def home(request):
     return render(request,'home.html')
+def register(request):
+    if request.method =='POST':
+        username = request.POST['username']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
+        if password1 == password2:
+            user_done = User()
+            user_done.username = username
+            user_done.set_password(password1)
+            user_done.save()
+            user = authenticate(username=username,password=password1)
+            login(request,user)
 
+        return redirect('home')
+
+    
+    return render(request,'accounts/register.html')
 
 def login_view(request):
+    
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']

@@ -9,10 +9,12 @@
     {% endif %}
     <form method="POST">
         {% csrf_token %}
-        <input class="text" type="text" placeholder="Enter Your Username" name="username">
-        <input class="text" type="password" placeholder="Enter Your Password" name="password">
+        <input class="text" type="text" placeholder="Enter Your Username" name="username" required>
+        <input class="text" type="password" placeholder="Enter Your Password" name="password1" required>
+        <input class="text" type="password" placeholder="Confirm Your Password" name="password2" required>
 
-        <button type="submit" class="submit download">Login</button>
+
+        <button type="submit" class="submit download">Sign Up</button>
     </form> <!--form end-->
     
 
