@@ -18,7 +18,9 @@ DEBUG = True
 # ALLOWED_HOSTS = ['djangovideo-3da1719df856.herokuapp.com']
 ALLOWED_HOSTS = []
 
-
+GRAPHENE = {
+    "SCHEMA": "project.schema.schema"
+}
 # Application definition
 
 INSTALLED_APPS = [
@@ -29,7 +31,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "graphene_django",
     'admin_honeypot',
+    
 ]
 
 MIDDLEWARE = [

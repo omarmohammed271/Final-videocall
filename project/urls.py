@@ -3,11 +3,13 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+from graphene_django.views import GraphQLView
 from . import views
 
 urlpatterns = [
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('secureomar/', admin.site.urls),
+    path("graphql", GraphQLView.as_view(graphiql=True)),
     path('',views.register,name='register'),
     path('home/',views.home,name='home'),
     path('login/',views.login_view,name='login'),
