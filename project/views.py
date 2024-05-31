@@ -48,7 +48,7 @@ def logout_view(request):
 def new_meeting(request):
     
     return render(request,'videocall/streaming.html',{'username':request.user.username,})
-@login_required(login_url='login')
+# @login_required(login_url='login')
 def join_meeting(request):
     if request.method == "POST":
         roomID = request.POST['roomID']
