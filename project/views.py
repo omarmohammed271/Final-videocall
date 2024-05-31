@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate,login,logout
 
 
 
-@login_required(login_url='login')
+# @login_required(login_url='login')
 def home(request):
     return render(request,'home.html')
 def register(request):
